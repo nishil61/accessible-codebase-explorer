@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Processing App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Speech Processing App</h1>
+    <div>
+        <input type="radio" id="tts" name="mode" value="tts" checked>
+        <label for="tts">Text to Speech</label>
+        <input type="radio" id="stt" name="mode" value="stt">
+        <label for="stt">Speech to Text</label>
+    </div>
+    <div id="tts-section">
+        <input type="text" id="text-input" placeholder="Enter text">
+        <input type="text" id="lang-input" placeholder="Language code (e.g., 'en')">
+        <button onclick="convertTextToSpeech()">Convert</button>
+    </div>
+    <div id="stt-section" style="display:none;">
+        <input type="file" id="audio-input">
+        <button onclick="convertSpeechToText()">Convert</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
